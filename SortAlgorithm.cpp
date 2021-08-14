@@ -212,9 +212,7 @@ void SortAlgorithm::heapSort() {
     }
     // 将首元素与尾元素交换，再调整为最大堆
     for (int i = arr.size() - 1; i > 0; i--) {
-        int temp = arr[0];
-        arr[0] = arr[i];
-        arr[i] = temp;
+        swap(arr[0], arr[i]);
         shiftDown(0, i);
     }
 }
@@ -234,4 +232,31 @@ void SortAlgorithm::shiftDown(int index, int length) {
         }
     }
     arr[index] = temp;
+}
+
+void SortAlgorithm::quickSort(int left, int right) {
+    if (right <= left) return;
+    int i = left, j = right - 1;
+    int pivot = getPivot(left, right);
+    while (true) {
+        while (arr[i] <= pivot) {i++;}
+        while (arr[j] >= pivot) {j--;}
+        if (i < j) {
+            swap(arr[i], arr[j]);
+        } else {
+            break;
+        }
+    }
+    swap(arr[i], arr[right]);
+    quickSort(left, i - 1);
+    quickSort(i + 1, right);
+}
+
+int SortAlgorithm::getPivot(int left, int right) {
+    int center = (left + right) / 2;
+    if (arr[left] > arr[center]) swap(arr[left], arr[center]);
+    if (arr[left] > arr[right]) swap(arr[left], arr[right]);
+    if (arr[center] > arr[right]) swap(arr[center], arr[right]);
+    swap(arr[center], arr[right]);
+    return arr[right];
 }

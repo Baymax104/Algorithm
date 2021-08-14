@@ -51,6 +51,10 @@ public:
     // 堆排序
     void heapSort();
     void shiftDown(int index, int length);
+
+    // 快速排序
+    void quickSort(int left, int right);
+    int getPivot(int left, int right);
 };
 ostream & operator<<(ostream &os, const SortAlgorithm &rhs);
 
