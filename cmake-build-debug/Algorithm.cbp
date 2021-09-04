@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/Projects/Clion2020.3/Algorithm/HuffmanTree.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="D:/Projects/Clion2020.3/Algorithm/HuffmanTree.h">
+			<Option target="Algorithm"/>
+		</Unit>
 		<Unit filename="D:/Projects/Clion2020.3/Algorithm/SortAlgorithm.cpp">
 			<Option target="Algorithm"/>
 		</Unit>

@@ -3,4 +3,4 @@ project(Algorithm)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Algorithm main.cpp SortAlgorithm.cpp SortAlgorithm.h)
+add_executable(Algorithm main.cpp SortAlgorithm.cpp SortAlgorithm.h HuffmanTree.cpp HuffmanTree.h)
